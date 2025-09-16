@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    index
+{% endblock %}
+
+
+
+{% block body %}
+    <h1>this is me</h1>
+    <ul>
+        {% for i in range(45) %}
+            <li>this is the number {{i + 1}}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
