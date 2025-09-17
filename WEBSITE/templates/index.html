@@ -19,16 +19,33 @@
     <section class="about">
         <div class="about-content">
             <h2>About <span class="span-title">UNLIMITE SHOOTER</span></h2>
-            <p>UNLIMITE SHOOTER is an action-packed shooting game that challenges players to shoot targets and achieve high scores. With simple controls and addictive gameplay, it's perfect for players of all ages.</p>
-            <p>Whether you're a casual gamer or a seasoned pro, UNLIMITE SHOOTER offers endless fun and excitement. So grab your virtual weapon and get ready to shoot your way to victory!</p>
+            <div class="content">
+                
+                <div class="game-description">
+                    <p>UNLIMITE SHOOTER is an action-packed shooting game that challenges players to shoot targets and achieve high scores. With simple controls and addictive gameplay, it's perfect for players of all ages.</p>
+                    <p>Whether you're a casual gamer or a seasoned pro, UNLIMITE SHOOTER offers endless fun and excitement. So grab your virtual weapon and get ready to shoot your way to victory!</p>
+                </div>
+                <div class="game-image">
+                    <img src="{{ url_for('static', filename='images/img.png') }}" alt="UNLIMITE SHOOTER Gameplay">
+                </div>
+            </div>
+            <a href="/about" class="btn">Learn More</a>
         </div>
     </section>
     <hr>
     <section class="developer">
         <div class="developer-content">
             <h2>Meet the Developer: <span class="span-title">ISSAM SENSI</span></h2>
-            <p>ISSAM SENSI is the creative mind behind UNLIMITE SHOOTER. With a passion for game development and a knack for creating engaging experiences, ISSAM has crafted this game to provide endless entertainment for players worldwide.</p>
-            <p>When not coding, ISSAM enjoys exploring new technologies and pushing the boundaries of what's possible in game design. Connect with ISSAM to learn more about his work and future projects!</p>
+            <div class="content">
+                <div class="developer-image">
+                    <img src="{{ url_for('static', filename='images/sensi.png') }}" alt="ISSAM SENSI">
+                </div>
+                <div class="developer-description">
+                    <p>ISSAM SENSI is the creative mind behind UNLIMITE SHOOTER. With a passion for game development and a knack for creating engaging experiences, ISSAM has crafted this game to provide endless entertainment for players worldwide.</p>
+                    <p>When not coding, ISSAM enjoys exploring new technologies and pushing the boundaries of what's possible in game design. Connect with ISSAM to learn more about his work and future projects!</p>
+                </div>
+                
+            </div>
             <a href="/developer" class="btn">Learn More</a>
         </div>
     </section>

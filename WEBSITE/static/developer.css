@@ -1,0 +1,16 @@
+.main-developer{
+    text-align: left;
+    padding: 10px 20px;
+}
+
+.drawing {
+    max-height: 500px;
+    object-fit: contain;
+    margin: auto;
+    display: block;
+    background-color: #17191A;
+    border-radius: 15px;
+    border: 1px solid gray
+}
+
+

@@ -13,3 +13,8 @@ def index():
 @app.route("/developer")
 def developer():
     return render_template("developer.html")
+
+
+@app.route("/about")
+def about():
+    return render_template("about.html")

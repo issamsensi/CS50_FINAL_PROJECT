@@ -13,12 +13,38 @@
 }
 
 body{
-  margin:0; background: /*url('../static/images/map.jpg') no-repeat center center fixed*/ var(--bg); 
+  margin:0; 
+  background: var(--bg); 
   color:var(--text); 
   font-family: Inter, "Segoe UI", Roboto, system-ui, sans-serif;
   -webkit-font-smoothing:antialiased;
   text-align: center;
+  line-height: 1.5;
+
 }
+
+.game-image img{
+    filter: drop-shadow(0 0 10px var(--secondary));
+    max-width: 450px; 
+    height: auto;
+    margin: 5px;
+}
+
+.developer-image img{
+    filter: drop-shadow(0 0 5px var(--accent));
+    max-width: 250px; 
+    height: auto;
+    margin: 5px;
+}
+
+.content {
+    display: flex;
+    align-items: center; 
+    gap: 20px;
+    justify-content: center;
+    margin: auto 5px;
+}
+
 
 header{
   display: flex; 
@@ -53,13 +79,14 @@ section{
 hr{
     
     width: 90%;
-    margin: auto;
+    margin: 40px auto;
     background-color: white;
     border: none;
-    height: 3px;
+    height: 4px;
     border-radius: 89%;
     opacity: 0.7;
     box-shadow: yellow 0px 0px 10px;
+    
 }
 
 
@@ -108,5 +135,27 @@ nav a:hover{
     color: var(--accent);
     font-weight: bold;
 
+}
+
+@media (max-width: 800px){
+    header{
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+
+    nav{
+        float: none;
+        margin-top: 10px;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .game-image img, .developer-image img {
+        width: 80%;
+        height: auto;
+    }
 }
 

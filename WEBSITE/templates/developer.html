@@ -4,7 +4,85 @@
 Developer
 {% endblock %}
 
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='developer.css') }}">
+{% endblock %}
+
 {% block body %}
 <h1>this is me, <span class="span-title">ISSAM SENSI</span></h1>
 <p>the developer of this site and this game</p>
+<div class="main-developer">
+    <h3>who is <span class="span-title">ISSAM SENSI</span>?</h3>
+    <p>Alright, my real name is <strong>ISSAM AMGHAR</strong>, but I like SENSI also, so you can call me ISSAMSENSI.</p>
+    <p>I am from Morocco, and I'm 20 years old right now.</p>
+    <p>I finished my studies this year at BTS (brevet de technecien superiur), branche of DSI (developpement des systemes d'information).</p>
+    <p>I developed this site for the CS50's final project, and I used much of languages and frameworks, and other tools to geet the actual result.</p>
+    <p>In this project I used python, pygame and other libraries to create the shooter game, I used also Flask to make this website, with the other tools like HTML, CSS, JAVASCRIPT, BOOTSTRAP, and somthing of SQL.</p>
+    <p>I tried to use much possible languages I learned in the fantastic course (cs50), and I think that I did it except C.</p>
+    <h3>some <span class="span-title">ISSAM SENSI</span>'s skills and knowledges</h3>
+    <p>I don't know these languages perfectly, just a little bit, and some I know only a tiny amount. But I have tried and used most of them before.</p>
+    <div class="languages">
+        <ul>
+            <li>Python</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>SQL</li>
+            <li>Flask</li>
+            <li>Pygame</li>
+            <li>Bootstrap</li>
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>Java</li>
+            <li>C</li>
+            <li>Vb.net</li>
+            <li>Vb6</li>
+            <li>PHP</li>
+            <li>MySQL</li>
+            <li>SQLite</li>
+            <li>SQL Server</li>
+            <li>XML</li>
+            <li>And more.....</li>
+        </ul>
+    </div>
+    <h3>some <span class="span-title">ISSAM SENSI</span>'s hobbies</h3>
+    <p>In my free time I have lot things to do, like watching Anime, Series, and Films, or reading some Books, Novels, Manhua, Manga and others. I also draw and learning new things about anything. but to be honest, my favourite hobbie was <strong>Sleeping</strong></p>
+    <p>But I can't forget one if the best hobbies, or we can say it's the best, it's coding. I like playing with codes and try to create somthing new just by a lines of code. I like play video games also.</p>
+    <p>I can't tell you everything about me, because there is a lot of things. but you can contact me and we can get know more than that, and I will be happy to receive some messages from you.</p>
+    <p>And finally there is some of my drawings I like you to see:</p>
+    <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{{ url_for('static', filename='images/drawings/one.jpg') }}" class="d-block w-100 drawing" alt="drawing">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/drawings/two.jpg') }}" class="d-block w-100 drawing" alt="drawing">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/drawings/three.jpg') }}" class="d-block w-100 drawing" alt="drawing">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/drawings/four.jpg') }}" class="d-block w-100 drawing" alt="drawing">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/drawings/five.jpg') }}" class="d-block w-100 drawing" alt="drawing">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/drawings/six.jpg') }}" class="d-block w-100 drawing" alt="drawing">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/drawings/seven.jpg') }}" class="d-block w-100 drawing" alt="drawing">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+</div>
 {% endblock %}
