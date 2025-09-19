@@ -59,6 +59,60 @@ header{
   z-index: 1000;
 }
 
+footer{
+    align-items: center;
+    padding: 10px;
+    background-color: var(--primary);
+    color: var(--muted);
+    width: 100%;
+    height: auto;
+}
+
+footer a{
+    text-decoration: none;
+    color: var(--muted);
+    margin: 0 5px;
+
+}
+
+i{
+    font-size: 30px;
+    margin: 10px;
+}
+
+footer .aler{
+    width: 350px;
+    margin: 5px auto;
+    text-align: center;
+    background-color: lightgreen;
+    opacity: 0.8;
+    color: rgb(3, 94, 3);
+    height: 35px;
+    border: 1px solid gray;
+    border-radius: 8px;
+    text-align: center;
+}
+
+footer a:hover{
+    color: lightgray;
+    font-weight: bold;
+}
+
+footer hr{
+    height: 1px;
+    background-color: var(--muted);
+    border: none;
+    margin: 10px auto;
+}
+
+footer form div{
+    width: 350px;
+    margin: auto;
+
+}
+
+
+
 section{
     background-color: var(--bg);
     padding: 10px;
@@ -156,6 +210,9 @@ nav a:hover{
     .game-image img, .developer-image img {
         width: 80%;
         height: auto;
+    }
+    main{
+        padding-top: 125px;
     }
 }
 

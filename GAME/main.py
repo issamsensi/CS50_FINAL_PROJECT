@@ -9,9 +9,9 @@ pygame.init()
 WIDTH, HEIGHT = 800, 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("CS50 Shooter Game")
-map_background = pygame.image.load("THE GAME/assets/map.jpg")
+map_background = pygame.image.load("GAME/assets/map.jpg")
 map_background = pygame.transform.scale(map_background, (WIDTH, HEIGHT))
-store_background = pygame.image.load("THE GAME/assets/store.jpg")
+store_background = pygame.image.load("GAME/assets/store.jpg")
 store_background = pygame.transform.scale(store_background, (WIDTH, HEIGHT))
 
 # colors
@@ -47,7 +47,7 @@ coins = []
 crystals = []
 gold = 0
 crystale = 0
-gold_image = pygame.image.load("THE GAME/assets/coin.png").convert_alpha()
+gold_image = pygame.image.load("GAME/assets/coin.png").convert_alpha()
 gold_image = pygame.transform.scale(gold_image, (32, 32))
 
 # the door to the shop

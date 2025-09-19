@@ -8,6 +8,7 @@
     <!--bootstrap cdn-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 
@@ -21,8 +22,9 @@
         <nav>
             <a href="/">Home</a>
             <a href="/about">About</a>
-            <a href="/contact">Contact</a>
             <a href="/developer">Developer</a>
+            <a href="/contact">Contact</a>
+            
         </nav>
     </header>
     <main>
@@ -31,8 +33,41 @@
         {% endblock %}
     </main>
     <footer>
-
+        <div>
+            <h4>Quick links</h4>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/developer">Developer</a>
+            <a href="/contact">Contact</a>
+            
+        </div>
+        <hr>
+        <div>
+            <h4>Newsletter</h4>
+            <p>Stay updated with our latest news and offers.</p>
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                    <div class="aler flash {{ category }}" role="alert">
+                        {{ message }}
+                    </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <form method="post" action="/newsletter">
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control text-bg-secondary" id="floatingInput" placeholder="name@example.com" name="email-newsletter" autocomplete="off">
+                    <label for="floatingInput">Email address</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+        </div>
+        <hr>
+        <div>
+            <p>© 2025 issamsensi</p>
+        </div>
     </footer>
+
 </body>
 </html>
 
