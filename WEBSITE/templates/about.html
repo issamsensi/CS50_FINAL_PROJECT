@@ -5,5 +5,18 @@
 {% block body %}
     <div class="container">
         <h1>About <span class="span-title">UNLIMITE SHOOTER</span></h1>
+        <p><strong>UNLIMITE SHOOTER</strong> is an action-packed shooting game that challenges players to shoot targets and achieve high scores. With simple controls and addictive gameplay, it's perfect for players of all ages.</p>
+        <p>Whether you're a casual gamer or a seasoned pro, <strong>UNLIMITE SHOOTER</strong> offers endless fun and excitement. So grab your virtual weapon and get ready to shoot your way to victory!</p>
+
+        <h2>Images</h2>
+        <div class="about-images">
+            <img src="{{ url_for('static', filename='images/game.png') }}" alt="game" class="about-image">
+            <img src="{{ url_for('static', filename='images/gameover.png') }}" alt="game over" class="about-image">
+            <img src="{{ url_for('static', filename='images/shop.png') }}" alt="shop" class="about-image">
+        </div>
+        <h2>Get Involved</h2>
+        <p>We are always looking for feedback and suggestions to improve <strong>UNLIMITE SHOOTER</strong>. If you have ideas for new features or improvements, please don't hesitate to <a href="/contact">contact us</a>. Your input is invaluable in helping us create the best gaming experience possible.</p>
+        <h2>Stay Updated</h2>
+        <p>Subscribe to our newsletter to stay informed about the latest updates, new features, and special offers related to <strong>UNLIMITE SHOOTER</strong>. Simply enter your email address in the subscription form located in the footer of our website.</p>
     </div>
 {% endblock %}

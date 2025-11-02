@@ -5,5 +5,35 @@ Contact - UNLIMITE SHOOTER
 {% endblock %}
 
 {% block body %}
-
+    <div class="contact-content">
+            <h2>Contact Us</h2>
+            <p>Have questions, feedback, or just want to say hello? We'd love to hear from you! Reach out to us through the following channels:</p>
+            <div class="social-links">
+                <a href="https://facebook.com/issamsensi"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://instagram.com/issamsensi"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@issamsensi"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="www.linkedin.com/in/issam-amghar-406b3a228"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/issamsensi"><i class="fa-brands fa-github"></i></a>
+                <a href="https://wa.me/+212658987985"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://youtube.com/@issamsensi?si=4ZpR37-s4ifInfwj"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://x.com/issamsensi"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <p>You can also send us an email at <a href="mailto:astkun010@gamil.com">email</a> or use the contact form below:</p>
+            <form method="post" action="/contact">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="contact-form form-control text-bg-secondary" id="name" name="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="contact-form form-control text-bg-secondary" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="contact-form form-control text-bg-secondary" id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+            
+    </div>
 {% endblock %}

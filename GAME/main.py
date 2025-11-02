@@ -47,7 +47,7 @@ except:
     coin_image.fill(YELLOW)
 
 
-# Particle Class for visual effects
+
 class Particle:
     def __init__(self, x, y, color, size=5):
         self.x = x
@@ -81,10 +81,10 @@ class Player:
         self.speed = 5
         self.bullet_speed = 7
         self.damage = 1
-        self.fire_rate = 15  # frames between shots
+        self.fire_rate = 15  
         self.fire_cooldown = 0
-        self.direction = 0  # 0=up, 1=right, 2=down, 3=left
-        self.bullet_type = "normal"  # normal, multi, laser, explosive
+        self.direction = 0  
+        self.bullet_type = "normal"  
         
     def get_rect(self):
         return pygame.Rect(self.x, self.y, self.width, self.height)
@@ -105,7 +105,7 @@ class Player:
             self.y += self.speed
             self.direction = 2
         
-        # Keep player in bounds
+      
         self.x = max(0, min(WIDTH - self.width, self.x))
         self.y = max(0, min(HEIGHT - self.height, self.y))
     
@@ -116,7 +116,7 @@ class Player:
             center_y = self.y + self.height // 2
             
             if self.bullet_type == "multi":
-                # Shoot 3 bullets in a spread
+                
                 for angle_offset in [-20, 0, 20]:
                     angle = self.direction * 90 + angle_offset
                     bullets.append(Bullet(center_x, center_y, self.bullet_speed, 
@@ -124,7 +124,7 @@ class Player:
             elif self.bullet_type == "laser":
                 bullets.append(Bullet(center_x, center_y, self.bullet_speed * 1.5, 
                                     self.damage * 2, self.direction * 90, "laser"))
-            else:  # normal
+            else:  
                 bullets.append(Bullet(center_x, center_y, self.bullet_speed, 
                                     self.damage, self.direction * 90, "normal"))
             
@@ -137,7 +137,7 @@ class Player:
             self.fire_cooldown -= 1
     
     def draw(self, screen):
-        # Draw player as a simple sprite (triangle pointing in direction)
+        # AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         center_x = self.x + self.width // 2
         center_y = self.y + self.height // 2
         
@@ -170,7 +170,7 @@ class Bullet:
         self.width = 10 if bullet_type == "normal" else 15
         self.height = 10 if bullet_type == "normal" else 15
         
-        # Calculate velocity based on angle
+
         rad = math.radians(angle)
         self.vx = math.sin(rad) * speed
         self.vy = -math.cos(rad) * speed
@@ -217,7 +217,7 @@ class Enemy:
             self.speed = 1
             self.damage = 2
             self.color = (150, 0, 0)
-        else:  # normal
+        else:  
             self.width = 40
             self.height = 40
             self.max_hp = 2
@@ -264,7 +264,7 @@ class Collectible:
         self.type = item_type
         self.width = 24
         self.height = 24
-        self.lifetime = 600  # 10 seconds at 60 FPS
+        self.lifetime = 600  
     
     def get_rect(self):
         return pygame.Rect(self.x, self.y, self.width, self.height)
@@ -275,7 +275,7 @@ class Collectible:
     def draw(self, screen):
         if self.type == "coin":
             screen.blit(coin_image, (self.x, self.y))
-        else:  # crystal
+        else:  
             pygame.draw.circle(screen, BLUE, (int(self.x + 12), int(self.y + 12)), 10)
             pygame.draw.circle(screen, WHITE, (int(self.x + 12), int(self.y + 12)), 10, 2)
 
@@ -283,7 +283,7 @@ class Collectible:
 # Game Class
 class Game:
     def __init__(self):
-        self.state = "map"  # map, shop, game_over, pause
+        self.state = "map"  
         self.player = Player(WIDTH // 2, HEIGHT // 2)
         self.bullets = []
         self.enemies = []
@@ -296,7 +296,7 @@ class Game:
         self.wave = 1
         
         self.enemy_spawn_timer = 0
-        self.enemy_spawn_rate = 120  # frames
+        self.enemy_spawn_rate = 120  
         
         self.door = pygame.Rect(391, 70, 25, 30)
         
@@ -305,7 +305,7 @@ class Game:
         self.font_large = pygame.font.SysFont(None, 48)
     
     def spawn_enemy(self):
-        # Random spawn position (edges of screen)
+
         side = random.choice(['left', 'right', 'top', 'bottom'])
         if side == 'left':
             x, y = -40, random.randint(0, HEIGHT - 40)
@@ -313,10 +313,10 @@ class Game:
             x, y = WIDTH, random.randint(0, HEIGHT - 40)
         elif side == 'top':
             x, y = random.randint(0, WIDTH - 40), -40
-        else:  # bottom
+        else:  
             x, y = random.randint(0, WIDTH - 40), HEIGHT
         
-        # Determine enemy type based on kills
+        
         if self.kills < 20:
             enemy_type = "normal"
         elif self.kills < 50:
@@ -333,36 +333,35 @@ class Game:
     def update_map(self):
         keys = pygame.key.get_pressed()
         
-        # Player movement
+        
         self.player.move(keys)
         self.player.update()
         
-        # Shooting
+        
         if keys[pygame.K_SPACE]:
             new_bullets = self.player.shoot()
             self.bullets.extend(new_bullets)
         
-        # Update bullets
         for bullet in self.bullets[:]:
             bullet.update()
             if bullet.is_off_screen():
                 self.bullets.remove(bullet)
         
-        # Spawn enemies
+        
         self.enemy_spawn_timer += 1
         if self.enemy_spawn_timer >= self.enemy_spawn_rate:
             self.spawn_enemy()
             self.enemy_spawn_timer = 0
         
-        # Update enemies
+        
         for enemy in self.enemies[:]:
             enemy.move_towards_player(self.player)
             
-            # Check collision with player
+            
             if enemy.get_rect().colliderect(self.player.get_rect()):
                 self.player.hp -= enemy.damage * 0.1
             
-            # Check collision with bullets
+            
             for bullet in self.bullets[:]:
                 if enemy.get_rect().colliderect(bullet.get_rect()):
                     enemy.hp -= bullet.damage
@@ -374,17 +373,16 @@ class Game:
                         self.create_explosion(enemy.x + enemy.width // 2, 
                                             enemy.y + enemy.height // 2, enemy.color)
                         
-                        # Drop items
-                        if random.random() < 0.5:  # 50% coin drop
+                        
+                        if random.random() < 0.5:  
                             self.collectibles.append(Collectible(enemy.x, enemy.y, "coin"))
-                        if random.random() < 0.05:  # 5% crystal drop
+                        if random.random() < 0.05: 
                             self.collectibles.append(Collectible(enemy.x, enemy.y, "crystal"))
                         
                         if enemy in self.enemies:
                             self.enemies.remove(enemy)
                     break
         
-        # Update collectibles
         for collectible in self.collectibles[:]:
             collectible.update()
             if collectible.lifetime <= 0:
@@ -398,52 +396,51 @@ class Game:
                                     YELLOW if collectible.type == "coin" else BLUE)
                 self.collectibles.remove(collectible)
         
-        # Update particles
+        
         for particle in self.particles[:]:
             particle.update()
             if particle.lifetime <= 0:
                 self.particles.remove(particle)
         
-        # Wave progression
+        
         if self.kills >= self.wave * 10:
             self.wave += 1
             self.enemy_spawn_rate = max(30, self.enemy_spawn_rate - 10)
         
-        # Check door collision
+    
         if self.player.get_rect().colliderect(self.door):
             self.state = "shop"
         
-        # Check game over
+        
         if self.player.hp <= 0:
             self.state = "game_over"
     
     def draw_map(self):
         screen.blit(map_background, (0, 0))
         
-        # Draw door
+        
         pygame.draw.rect(screen, (139, 69, 19), self.door)
         pygame.draw.rect(screen, BLACK, self.door, 2)
         
-        # Draw player
+        
         self.player.draw(screen)
         
-        # Draw bullets
+       
         for bullet in self.bullets:
             bullet.draw(screen)
         
-        # Draw enemies
+       
         for enemy in self.enemies:
             enemy.draw(screen)
         
-        # Draw collectibles
+        
         for collectible in self.collectibles:
             collectible.draw(screen)
         
-        # Draw particles
         for particle in self.particles:
             particle.draw(screen)
         
-        # Draw HUD
+   
         self.draw_hud()
     
     def draw_hud(self):
@@ -585,11 +582,11 @@ class Game:
                     
                     elif self.state == "game_over":
                         if event.key == pygame.K_r:
-                            self.__init__()  # Restart game
+                            self.__init__()  
                         elif event.key == pygame.K_q:
                             running = False
             
-            # Update and draw based on state
+            
             if self.state == "map":
                 self.update_map()
                 self.draw_map()
