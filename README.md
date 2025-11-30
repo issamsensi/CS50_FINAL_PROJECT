@@ -25,7 +25,7 @@ This project demonstrates proficiency across multiple technologies including Pyt
 
 ### Demo Video
 
-[![Watch the video](https://img.youtube.com/vi/9skhrPodQiQ/0.jpg)](https://www.youtube.com/watch?v=9skhrPodQiQ)
+[![Watch the video](https://img.youtube.com/vi/HZ0Cm6Y2d9I/0.jpg)](https://www.youtube.com/watch?v=HZ0Cm6Y2d9I)
 
 ---
 
