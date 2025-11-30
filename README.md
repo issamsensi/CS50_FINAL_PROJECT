@@ -555,7 +555,7 @@ This project was created as the final project for **Harvard's CS50: Introduction
 **Developer**: Issam Amghar (Issam Sensi)  
 **Email**: astkun010@gmail.com  
 **GitHub**: [@issamsensi](https://github.com/issamsensi)  
-**LinkedIn**: [Issam Amghar](https://www.linkedin.com/in/issam-amghar-406b3a228)  
+**LinkedIn**: [Issam Amghar](https://www.linkedin.com/in/issam-amghar)  
 **Location**: Morocco 🇲🇿
 
 ### Social Media
