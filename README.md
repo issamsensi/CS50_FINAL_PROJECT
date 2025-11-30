@@ -19,6 +19,87 @@
 
 This project demonstrates proficiency across multiple technologies including Python, Pygame, Flask, HTML, CSS, JavaScript, Bootstrap, SQL, and modern web development practices.
 
+## 🌐 Demo
+
+### [Website Live Demo](https://issamsensi.pythonanywhere.com/)
+
+### Demo Video
+
+[![Watch the video](https://img.youtube.com/vi/9skhrPodQiQ/0.jpg)](https://www.youtube.com/watch?v=9skhrPodQiQ)
+
+---
+
+## 🎓 Why This Project Qualifies as a CS50 Final Project
+
+This project meets and exceeds the CS50 final project requirements through the following key aspects:
+
+### Technical Complexity
+- **Object-Oriented Programming**: Implements multiple Python classes (`Player`, `Enemy`, `Bullet`, `Collectible`, `Particle`, `Game`) demonstrating deep understanding of OOP principles including inheritance, encapsulation, and polymorphism
+- **Advanced Data Structures**: Utilizes lists, dictionaries, and custom objects to manage game state, enemy waves, and collectibles efficiently
+- **Algorithm Implementation**: Features pathfinding AI for enemy movement, collision detection systems, and dynamic difficulty scaling based on player progression
+
+### Interactive Functionality
+- **Real-Time Gameplay**: Provides engaging interactive gameplay with responsive controls, smooth animations, and immediate visual feedback
+- **User Input Handling**: Processes keyboard input for movement, shooting, and menu navigation with proper event handling and state management
+- **Dynamic User Interface**: Displays real-time HUD elements including health bars, resource counters, wave indicators, and game statistics
+
+### Professional Code Organization
+- **Modular Architecture**: Separates concerns between game logic, rendering, and state management for maintainable and scalable code
+- **Clean File Structure**: Organizes assets, source code, and build files in a logical directory hierarchy
+- **Full-Stack Implementation**: Combines both game development (Pygame) and web development (Flask) demonstrating versatility across different programming domains
+
+### Multiple Features & Systems
+- **Combat System**: Three bullet types with unique properties and three enemy variants with different behaviors
+- **Economy System**: Gold and crystal collection with a fully functional shop for upgrades
+- **Progression System**: Wave-based difficulty scaling with unlockable features
+- **Web Platform**: Complete promotional website with database integration, form handling, and responsive design
+- **Particle Effects**: Visual polish with explosion animations and collectible feedback
+
+### Visual Excellence
+- **Custom Graphics**: Professionally designed backgrounds, sprites, and UI elements
+- **Responsive Web Design**: Mobile-friendly website with modern CSS animations and Bootstrap integration
+- **Polished User Experience**: Smooth transitions, hover effects, and intuitive navigation across both game and website components
+
+### Beyond Basic Requirements
+This project goes significantly beyond a simple application by integrating:
+- **Database Operations**: SQLite integration for newsletter subscriptions with duplicate prevention
+- **Template Rendering**: Jinja2 templating for dynamic content generation
+- **Deployment Ready**: Production-ready Flask application deployed on PythonAnywhere
+- **Executable Distribution**: PyInstaller compilation for cross-platform game distribution
+- **Comprehensive Documentation**: Detailed README with installation guides, feature lists, and technical specifications
+
+---
+
+## 📸 Screenshots
+
+### Game Screenshots
+
+#### Main Gameplay
+![Gameplay Screenshot](WEBSITE/static/images/game.png)
+*Intense top-down shooter action with enemies, bullets, and collectibles*
+
+#### Shop System
+![Shop Interface](WEBSITE/static/images/shop.png)
+*Upgrade your character with gold and crystals in the shop*
+
+#### Game Over Screen
+![Game Over](WEBSITE/static/images/gameover.png)
+*Final statistics and restart options*
+
+### Website Screenshots
+
+#### Home Page
+![Website Home](WEBSITE/static/images/home.png)
+*Modern landing page with game overview and download button*
+
+#### Developer Portfolio
+![Developer Page](WEBSITE/static/images/developer.png)
+*Developer profile with skills, hobbies, and artwork gallery*
+
+#### Contact Form
+![Contact Page](WEBSITE/static/images/contact.png)
+*Professional contact form with social media integration*
+
 ---
 
 ## 🎯 Project Components
@@ -551,7 +632,7 @@ This project was created as the final project for **Harvard's CS50: Introduction
 **Developer**: Issam Amghar (Issam Sensi)  
 **Email**: astkun010@gmail.com  
 **GitHub**: [@issamsensi](https://github.com/issamsensi)  
-**LinkedIn**: [Issam Amghar](https://www.linkedin.com/in/issam-amghar-406b3a228)  
+**LinkedIn**: [Issam Amghar](https://www.linkedin.com/in/issam-amghar)  
 **Location**: Morocco 🇲🇿
 
 ### Social Media
