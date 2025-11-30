@@ -27,6 +27,7 @@ This project demonstrates proficiency across multiple technologies including Pyt
 
 [![Watch the video](https://img.youtube.com/vi/9skhrPodQiQ/0.jpg)](https://www.youtube.com/watch?v=9skhrPodQiQ)
 
+<<<<<<< HEAD
 ---
 
 ## 🎓 Why This Project Qualifies as a CS50 Final Project
@@ -99,6 +100,9 @@ This project goes significantly beyond a simple application by integrating:
 #### Contact Form
 ![Contact Page](WEBSITE/static/images/contact.png)
 *Professional contact form with social media integration*
+=======
+
+>>>>>>> 2e014a56cd983e87be4d33bafe16d9b6a6c382c5
 
 ---
 
