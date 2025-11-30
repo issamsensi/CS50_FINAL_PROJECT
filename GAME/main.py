@@ -577,6 +577,7 @@ class Game:
                     if self.state == "shop":
                         if event.key == pygame.K_b:
                             self.state = "map"
+                            self.player.y = self.door.y + self.door.height + 10
                         else:
                             self.handle_shop_purchase(event.key)
                     
