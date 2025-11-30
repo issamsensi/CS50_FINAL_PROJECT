@@ -21,7 +21,7 @@ This project demonstrates proficiency across multiple technologies including Pyt
 
 ## 🌐 Demo
 
-### 🌐 [Website Live Demo](https://issamsensi.pythonanywhere.com/)
+### [Website Live Demo](https://issamsensi.pythonanywhere.com/)
 
 ### 🎥 Demo Video
 
