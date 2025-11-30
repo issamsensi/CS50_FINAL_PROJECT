@@ -19,8 +19,9 @@
 
 This project demonstrates proficiency across multiple technologies including Python, Pygame, Flask, HTML, CSS, JavaScript, Bootstrap, SQL, and modern web development practices.
 
-## 🌐 Live Demo
-[Unlimite Shooter](https://issamsensi.pythonanywhere.com/)
+## 🌐 Demo
+[Website Live Demo](https://issamsensi.pythonanywhere.com/)
+
 
 ---
 
